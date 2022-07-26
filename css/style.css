@@ -1,0 +1,289 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+:root{
+    box-sizing: border-box;
+    --blue-color: #5c84ce;
+    --pink-color: #f03c6d;
+    --paragraph-color: #707070;
+}
+
+
+::-webkit-scrollbar{
+    width: 10px;
+}
+::-webkit-scrollbar-thumb{
+    background: linear-gradient(var(--blue-color),var(--pink-color));
+    border-radius: 20px;
+}
+
+*::before::after{
+    box-sizing: inherit;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background: #f9fbff;
+}
+h1{
+    font-size: 2.8rem;
+    font-weight: 900;
+    letter-spacing: 3px;
+}
+h2{
+    font-size: 1.75rem;
+    font-weight: 700;
+}
+p{
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--paragraph-color);
+}
+
+a{
+    font-size: 1rem;
+    color: #fff;
+}
+.mt-100{
+    margin-top: 100px;
+}
+.mt-70{
+    margin-top: 70px;
+
+}
+
+/*----------Navbar Section Sticky--------------*/
+.navbar-nav .nav-item{
+    margin: 0 10px;
+}
+nav.stickyadd .active{
+    border-bottom: 1.5px solid rgba(0, 0, 0, 0.7);
+}
+nav.stickyadd{
+    background-color: rgba(255, 355, 255, 0.9);
+    transition: all 0.5s;
+}
+nav.stickyadd .nav-item .nav-link{
+    color: rgba(0, 0, 0, 0.7);
+}
+nav.stickyadd .navbar-brand{
+    color: rgba(0, 0, 0, 0.7);
+}
+nav.stick{
+    transition: all 0.5s;
+}
+.hamburger{
+    color: #fff;
+    font-size: 1.5rem;
+}
+.hamburger.whenscrolled{
+    color: #000;
+}
+
+/*--------------Hero Section CSS--------------*/
+
+.hero{
+    height: 100vh;
+    width: 100%;
+   background-image:linear-gradient(rgba(92, 132, 236, 0.8),rgba(92, 132, 236, 0.8)), url(../assets/images/bgimg.jpg);
+    background-size: cover;
+    background-position: center;
+
+}
+.hero-content{
+    color: #fff;
+}
+
+/*--------About Section CSS-------------*/
+
+.about-class{
+    margin-top: -200px;
+   
+}
+.about-content{
+    background: linear-gradient(135deg, var(--blue-color),var(--pink-color));
+    
+}
+.wrap{
+    margin-top: 40px;
+    padding: 30px;
+}
+   
+.wrap p,
+.wrap h2{
+    color: #fff;
+
+}
+.wrap h2{
+    margin-bottom: 20px;
+}
+    
+
+/*------------Service Section CSS--------*/
+.services-show{
+    text-align: center;
+}
+.services-show .card{
+    padding: 25px;
+    margin-bottom: 30px;
+}
+.services-show i{
+   font-size: 50px;
+   background: linear-gradient(var(--pink-color),black);
+   -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/*-------------Team Section CSS*/
+.team-class{
+   z-index: 3;
+    padding: 100px;
+}
+.team-class img{
+    z-index: 2;
+}
+.team-class .bg-white{
+    background: #fff;
+}
+.team-content{
+    padding: 15px;
+}
+.team-class .box{
+    z-index: 1;
+    position: relative;
+    
+}
+.team-class .box::before{
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: -20px;
+    left: -20px;
+    position: absolute;
+    z-index: -1;
+    background: linear-gradient(135deg, var(--blue-color),var(--pink-color));
+}
+
+/*-----------projects section css-------------*/
+.project-class i{
+    font-size: 50px;
+    background: linear-gradient(var(--pink-color),black);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 20px 0 5px 20px;
+}
+.project-class .col-md-3{
+    padding: 0;
+}
+.project-class .card{
+    margin: 5px;
+}
+
+/*------------Contact Section CSS----------*/
+.contact-class .bg-contact{
+    height: 40vh;
+    width: 100%;
+    background: linear-gradient(var(--blue-color),black);
+}
+.contact-content{
+    margin-top: -20vh;
+}
+.contact-class form{
+    background-color: #fff;
+    padding: 100px;
+}
+.contact-class .contact-address{
+    background: linear-gradient(135deg, var(--blue-color),var(--pink-color));
+    padding: 90px;
+    color: #fff;
+
+}
+.contact-class .contact-address p{
+    color: #fff;
+    margin: 20px 0;
+
+}
+.contact-class .social-icon{
+    display: table;
+}
+.contact-class .social-icon i{
+    display: table-cell;
+    font-size: 20px;
+    width: 1%;
+}
+
+/*-----------------Footer Css---------------*/
+
+footer{
+    height: 80px;
+    line-height: 80px;
+    text-align: center;
+    background: #0c003c;
+}
+footer p{
+    color: #fff;
+}
+
+
+@media(max-width: 576px){
+    h1{
+        font-size: 1.5rem;
+        font-weight: 900;
+    }
+    h2{
+        font-size: 1.2rem;
+        font-weight: 700;
+    }
+    .about-class{
+        margin-top: 0;
+    }
+    .services-class{
+        text-align: center;
+
+    }
+    .service-content{
+        margin-bottom: 50px;
+    }
+    .team-class{
+        text-align: center;
+        padding: 0;
+    }
+    .team-class h2{
+        text-align: center;
+       
+    }
+    .team-class .team-content{
+        margin-top: 50px;
+    }
+    .project-class{
+        text-align: center;
+    }
+    .project-class .card{
+        margin-right: 0;
+        margin-bottom: 30px;
+    }
+    .project-class .col{
+        margin-top: 50px;
+    }
+    .contact-class{
+        text-align: center;
+    }
+    .contact-class form{
+        padding: 40px;
+    }
+    .contact-class .contact-address{
+        padding: 40px;
+        text-align: center;
+    }
+}
+
+@media(max-width: 800px){
+    h1{
+        font-size: 1.3rem;
+        font-weight: 900;
+    }
+    h2{
+        font-size: 1.2rem;
+        font-weight: 700;
+    }
+}
